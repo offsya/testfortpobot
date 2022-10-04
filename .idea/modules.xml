@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/durger.iml" filepath="$PROJECT_DIR$/.idea/durger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/tg-web-app-react.iml" filepath="$PROJECT_DIR$/.idea/tg-web-app-react.iml" />
     </modules>
   </component>
 </project>
