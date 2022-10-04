@@ -18,10 +18,8 @@
 
 .img {
     width: 70%;
-    background: lightgray;
     height: 120px;
     margin: 0 auto;
-    background: var(--tg-theme-button-color);
 }
 
 .nmb{
