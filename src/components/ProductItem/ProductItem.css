@@ -8,7 +8,7 @@
 
 .price{
     text-align: center;
-    color: var(--tg-theme-text-color)
+    color: var(--tg-theme-text-color);
 }
 
 .name{
@@ -29,7 +29,7 @@
     width: 20px;
     height: 20px;
     background: #f9a653;
-    color: var(--tg-theme-text-color)
+    color: var(--tg-theme-text-color);
     font-weight: bold;
     font-size: 14px;
 }
