@@ -3,12 +3,13 @@
     flex-direction: column;
     padding: 15px;
     width: 170px;
+    background: gray;
 }
 
 
 .price{
     text-align: center;
-    color: white;
+    color: var(--tg-theme-button-text-color);
 }
 
 .name{
@@ -28,8 +29,8 @@
     border-radius: 20px;
     width: 20px;
     height: 20px;
-    background: orange;
-    color: white;
+    background: #f9a653;
+    color: var(--tg-theme-button-text-color);
     font-weight: bold;
     font-size: 14px;
 }
@@ -38,18 +39,24 @@
     font-size: 0.8em;
 }
 
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .add-btn {
-    width: 100%;
+    width: 50%;
     font-weight: bold;
-    color: white;
+    color: var(--tg-theme-button-text-color);
 }
 .add-btn {
     display: inline-block;
     padding: 10px 20px;
     border: none;
-    background: rgb(248, 168, 24);
+    background: #f9a653;
     border-radius: 10px;
-    color: #fff;
+    color: var(--tg-theme-button-text-color);
     text-transform: uppercase;
     font-weight: 700;
 
@@ -57,6 +64,7 @@
 }
 
 .add-btn:hover {
-    background: lightgreen;
+    box-shadow: 1px 1px 10px 1px #f9a653;
 }
+
 
