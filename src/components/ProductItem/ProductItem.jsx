@@ -2,7 +2,7 @@ import React from 'react';
 import Button from "../Button/Button";
 import './ProductItem.css';
 
-const ProductItem = ({product, className, onAdd}) => {
+const ProductItem = ({product, className, onAdd, img}) => {
 
     const onAddHandler = () => {
         onAdd(product);
@@ -10,14 +10,13 @@ const ProductItem = ({product, className, onAdd}) => {
 
     return (
         <div className={'product ' + className}>
-            <img src="1.png" className={'img'}/>
-            <div className={'titsle'}>{product.title}</div>
-            <div className={'description'}>{product.description}</div>
+            <div className='nmb'>0</div>
+            <img src={require('./' + img)} className={'img'}/>
             <div className={'price'}>
-                <span>Стоимость: <b>{product.price}</b></span>
+                <span><b className='name'>{product.title}</b>: <b>{product.price}$</b></span>
             </div>
             <Button className={'add-btn'} onClick={onAddHandler}>
-                Добавить в корзину
+                ADD
             </Button>
         </div>
     );
