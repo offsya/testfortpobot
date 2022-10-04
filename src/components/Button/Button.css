@@ -1,6 +1,5 @@
 .button {
     padding: 10px 15px;
-    color: var(--tg-theme-button-text-color);
     border: none;
     outline: none;
     cursor: pointer;
