@@ -15,11 +15,11 @@
     justify-content: center;
 }
 .search{
-    width: 30%;
+    width: 50%;
     border-radius: 50px;
     text-align: center;
     border: 2px solid black;
     box-shadow: 1px 1px 10px 1px gray;
     height: 50px;
-    margin: 50px;
+    margin: 20px;
 }
