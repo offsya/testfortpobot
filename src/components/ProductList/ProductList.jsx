@@ -19,9 +19,9 @@ const products = [
     {id: '12', title: 'Burger', price: 100, description: 'Зеленого цвета, теплая', img: 'livebg.gif'},
 ]
 
-const getTotalPrice = (items = []) => {
+const getTotalPrice = (items = [], count) => {
     return items.reduce((acc, item) => {
-        return acc += item.price
+        return acc += item.price*count
     }, 0)
 }
 
@@ -52,7 +52,7 @@ const ProductList = () => {
         }
     }, [onSendData])
 
-    const onAdd = (product) => {
+    const onAdd = (product, count) => {
         const alreadyAdded = addedItems.find(item => item.id === product.id);
         let newItems = [];
 
@@ -69,7 +69,7 @@ const ProductList = () => {
         } else {
             tg.MainButton.show();
             tg.MainButton.setParams({
-                text: `Купить ${getTotalPrice(newItems)}`
+                text: `Купить ${getTotalPrice(newItems, count)}`
             })
         }
     }

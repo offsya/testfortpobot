@@ -11,13 +11,10 @@ const ProductItem = ({product, className, onAdd, img}) => {
     const [check, setCheck] = useState(true);
     const [count, setCount] = useState(0);
     const onAddHandler = () => {
-        onAdd(product);
+        onAdd(product, count);
     }
     function checker(){
         setCheck(!check);
-    }
-    function gello(){
-        console.log('hello wrodl')
     }
 
 
@@ -38,10 +35,10 @@ const ProductItem = ({product, className, onAdd, img}) => {
                 </div>
                 :
                 <div className={'btn'}>
-                    <button className={'add-btn pm button'} onClick={() => {onAddHandler; setCount(count + 1)}}>
+                    <button className={'add-btn pm button'} onClick={() => {onAddHandler(); setCount(count + 1)}}>
                         +
                     </button>
-                    <button className={'add-btn pm button'} onClick={() => {onAddHandler; count <= 1 ? checker() : setCount(count - 1)}}>
+                    <button className={'add-btn pm button'} onClick={() => {onAddHandler(); count <= 1 ? checker() : setCount(count - 1)}}>
                         -
                     </button>
                 </div>
