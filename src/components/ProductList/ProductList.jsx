@@ -21,7 +21,7 @@ const products = [
 
 const getTotalPrice = (items = [], count) => {
     return items.reduce((acc, item) => {
-        return acc += item.price*count
+        return acc += item.price
     }, 0)
 }
 
@@ -51,7 +51,7 @@ const ProductList = () => {
             tg.offEvent('mainButtonClicked', onSendData)
         }
     }, [onSendData])
-
+    const [total, setTotal] = useState(0);
     const onAdd = (product, count) => {
         const alreadyAdded = addedItems.find(item => item.id === product.id);
         let newItems = [];
@@ -64,12 +64,12 @@ const ProductList = () => {
 
         setAddedItems(newItems)
 
-        if(count === 0) {
+        if(getTotalPrice === 0) {
             tg.MainButton.hide();
         } else {
             tg.MainButton.show();
             tg.MainButton.setParams({
-                text: `Купить ${getTotalPrice(newItems, count)}`
+                text: `Купить ${getTotalPrice}`
             })
         }
     }
