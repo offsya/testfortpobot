@@ -4,14 +4,17 @@ import Minus from "../Button/Minus";
 import Plus from "../Button/Plus";
 import './ProductItem.css';
 
-const ProductItem = ({product, className, onAdd, img}) => {
+const ProductItem = ({product, className, onAdd, onDel, img}) => {
 
     //hello worl
 
     const [check, setCheck] = useState(true);
     const [count, setCount] = useState(0);
     const onAddHandler = () => {
-        onAdd(product, count);
+        onAdd(product, count + 1);
+    }
+    const onDelHandler = () => {
+        onDel(product, count + 1);
     }
     function checker(){
         setCheck(!check);
@@ -38,7 +41,7 @@ const ProductItem = ({product, className, onAdd, img}) => {
                     <button className={'add-btn pm button'} onClick={() => {onAddHandler(); setCount(count + 1)}}>
                         +
                     </button>
-                    <button className={'add-btn pm button'} onClick={() => {onAddHandler(); count <= 1 ? checker() : setCount(count - 1)}}>
+                    <button className={'add-btn pm button'} onClick={() => {onDelHandler(); count <= 1 ? checker() : setCount(count - 1)}}>
                         -
                     </button>
                 </div>
