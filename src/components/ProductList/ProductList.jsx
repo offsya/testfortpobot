@@ -6,13 +6,13 @@ import {useCallback, useEffect} from "react";
 import {type} from "@testing-library/user-event/dist/type";
 
 const products = [
-    {id: '1', title: 'Burger', price: 100, description: 'Синего цвета, прямые', count: 0, img: 'livebg.gif'},
-    {id: '2', title: 'Burger', price: 100, description: 'Зеленого цвета, теплая', count: 0, img: 'livebg.gif'},
-    {id: '3', title: 'Burger', price: 100, description: 'Синего цвета, прямые', count: 0, img: 'livebg.gif'},
-    {id: '4', title: 'Burger', price: 100, description: 'Зеленого цвета, теплая', count: 0, img: 'livebg.gif'},
-    {id: '5', title: 'Burger', price: 100, description: 'Синего цвета, прямые', count: 0, img: 'livebg.gif'},
-    {id: '6', title: 'Burger', price: 100, description: 'Зеленого цвета, теплая', count: 0, img: 'livebg.gif'},
-    {id: '7', title: 'Burger', price: 100, description: 'Синего цвета, прямые', count: 0, img: 'livebg.gif'},
+    {id: '1', title: 'Burger', price: 100, description: 'Синего цвета, прямые', count: 0, img: 'w1.jpeg'},
+    {id: '2', title: 'Burger', price: 100, description: 'Зеленого цвета, теплая', count: 0, img: 'w2.jpeg'},
+    {id: '3', title: 'Burger', price: 100, description: 'Синего цвета, прямые', count: 0, img: 'w3.jpeg'},
+    {id: '4', title: 'Burger', price: 100, description: 'Зеленого цвета, теплая', count: 0, img: 'w4.jpeg'},
+    {id: '5', title: 'Burger', price: 100, description: 'Синего цвета, прямые', count: 0, img: 'w5.jpeg'},
+    {id: '6', title: 'Burger', price: 100, description: 'Зеленого цвета, теплая', count: 0, img: 'w6.jpeg'},
+    {id: '7', title: 'Burger', price: 100, description: 'Синего цвета, прямые', count: 0, img: 'w7.jpeg'},
     {id: '8', title: 'Burger', price: 100, description: 'Зеленого цвета, теплая', count: 0, img: 'livebg.gif'},
     {id: '9', title: 'Burger', price: 100, description: 'Зеленого цвета, теплая', count: 0, img: 'livebg.gif'},
     {id: '10', title: 'Burger', price: 100, description: 'Зеленого цвета, теплая', count: 0, img: 'livebg.gif'},
