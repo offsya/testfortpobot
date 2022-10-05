@@ -4,7 +4,6 @@ import ProductItem from "../ProductItem/ProductItem";
 import {useTelegram} from "../../hooks/useTelegram";
 import {useCallback, useEffect} from "react";
 import {type} from "@testing-library/user-event/dist/type";
-import {Route} from "react-router-dom";
 
 const products = [
     {id: '1', title: 'Burger', price: 100, description: 'Синего цвета, прямые', count: 0, img: 'livebg.gif'},
@@ -37,7 +36,7 @@ const ProductList = () => {
             totalPrice: getTotalPrice(addedItems),
             queryId,
         }
-        <Route/>
+
         // fetch('http://85.119.146.179:8000/web-data', {
         //     method: 'POST',
         //     headers: {
