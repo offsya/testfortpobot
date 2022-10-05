@@ -16,6 +16,9 @@ const ProductItem = ({product, className, onAdd, img}) => {
     function checker(){
         setCheck(!check);
     }
+    function gello(){
+        console.log('hello wrodl')
+    }
 
 
 
