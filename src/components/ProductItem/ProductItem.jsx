@@ -1,25 +1,47 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Button from "../Button/Button";
+import Minus from "../Button/Minus";
+import Plus from "../Button/Plus";
 import './ProductItem.css';
 
 const ProductItem = ({product, className, onAdd, img}) => {
 
+
+    const [check, setCheck] = useState(true);
+    const [count, setCount] = useState(0);
     const onAddHandler = () => {
         onAdd(product);
     }
+    function checker(){
+        setCheck(!check);
+    }
+
+
+
 
     return (
         <div className={'product ' + className}>
-            <div className='nmb'>0</div>
+            {!check ? <div className='nmb'><span className='child'>{count}</span></div> : ''}
             <img src={require('./' + img)} className={'img'}/>
             <div className={'price'}>
                 <span><b className='name'>{product.title}</b>: <b>{product.price}$</b></span>
             </div>
-            <div className={'btn'}>
-                <Button className={'add-btn'} onClick={onAddHandler}>
-                    ADD
-                </Button>
-            </div>
+            {check ?
+                <div className={'btn'}>
+                    <button className={'add-btn button'} onClick={() => {checker()}}>
+                        ADD
+                    </button>
+                </div>
+                :
+                <div className={'btn'}>
+                    <button className={'add-btn pm button'} onClick={() => {onAddHandler; setCount(count + 1)}}>
+                        +
+                    </button>
+                    <button className={'add-btn pm button'} onClick={() => {onAddHandler; count <= 1 ? checker() : setCount(count - 1)}}>
+                        -
+                    </button>
+                </div>
+            }
         </div>
     );
 };
