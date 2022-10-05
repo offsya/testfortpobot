@@ -13,6 +13,9 @@ const ProductItem = ({product, className, onAdd, img}) => {
     const onAddHandler = () => {
         onAdd(product, count + 1);
     }
+    function whynot(){
+        console.log('kek')
+    }
     function checker(){
         setCheck(!check);
     }
