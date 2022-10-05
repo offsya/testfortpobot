@@ -65,6 +65,8 @@ const ProductList = () => {
     }
 
     return (
+        <div className={'test'}>
+            <input type="text" className={'search'} placeholder="Search.."/>
         <div className={'list'}>
             {products.map(item => (
                 <ProductItem
@@ -74,6 +76,7 @@ const ProductList = () => {
                     img={item.img}
                 />
             ))}
+        </div>
         </div>
     );
 };
