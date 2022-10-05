@@ -16,6 +16,7 @@ const ProductItem = ({product, className, onAdd, img}) => {
     function whynot(){
         console.log('kek')
     }
+    whynot();
     function checker(){
         setCheck(!check);
     }
